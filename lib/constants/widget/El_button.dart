@@ -22,7 +22,7 @@ class ElButton extends StatelessWidget {
   final double fontSize;
   final FontWeight;
   final Color? sideColor;
-  final Widget onPressed;
+  final onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +47,7 @@ class ElButton extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => onPressed),
-            );
+            Navigator.pushNamed(context, onPressed);
           },
         ));
   }
@@ -61,12 +58,10 @@ class ElButtonIcon extends StatelessWidget {
       {super.key,
       required this.titel,
       required this.icon,
-      required this.action,
       this.sideColor,
       this.color});
   final String titel;
   final String icon;
-  final Widget action;
   final Color? color;
   final Color? sideColor;
   @override
@@ -75,14 +70,9 @@ class ElButtonIcon extends StatelessWidget {
       height: 41,
       width: double.infinity,
       child: ElevatedButton.icon(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => action),
-          );
-        },
+        onPressed: () {},
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.only(left: 28),
+          padding: const EdgeInsets.only(left: 28),
           alignment: Alignment.centerLeft,
           side: BorderSide(color: sideColor ?? green, width: 2),
           backgroundColor: color ?? green,
@@ -91,8 +81,7 @@ class ElButtonIcon extends StatelessWidget {
           ),
         ),
         icon: Image.asset('assets/icons/$icon'),
-        label: Padding(
-          padding: const EdgeInsets.only(left: 15),
+        label: Center(
           child: Text(
             titel,
             style: TextStyle(

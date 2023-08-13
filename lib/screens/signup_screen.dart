@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:healthy/constants/colors.dart';
 import 'package:healthy/constants/widget/El_button.dart';
 import 'package:healthy/screens/home_screen.dart';
-import 'package:healthy/screens/login_screen.dart';
 import '../constants/font_size.dart';
 import '../constants/widget/text_Field.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
-
+  static const routes = '/SignupScreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,59 +82,55 @@ class SignupScreen extends StatelessWidget {
                 color: green,
                 textcolor: white,
                 fontSize: h1,
-                onPressed: HomeScreen(),
+                onPressed: HomeScreen.routes,
                 FontWeight: w700,
               ),
               SizedBox(
-                height: 5,
+                height: 8,
               ),
               Text(
                 "by registration process, you accept our privacy policy",
                 style: TextStyle(
                   fontFamily: "Inter",
-                  fontSize: h2,
+                  fontSize: 14,
                   fontWeight: w500,
                   color: black,
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
-                height: 16,
-              ),
-              Row(children: [
-                Expanded(
-                  child: Divider(
-                    color: green,
-                    indent: 20,
-                    endIndent: 10,
-                    thickness: 2,
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 14),
+                child: Row(children: [
+                  Expanded(
+                    child: Divider(
+                      color: green,
+                      indent: 20,
+                      endIndent: 10,
+                      thickness: 2,
+                    ),
                   ),
-                ),
-                Text(
-                  'or',
-                  style: TextStyle(
-                    fontFamily: "Inter",
-                    fontSize: 18,
-                    fontWeight: w700,
-                    color: green,
+                  Text(
+                    'or',
+                    style: TextStyle(
+                      fontFamily: "Inter",
+                      fontSize: 18,
+                      fontWeight: w700,
+                      color: green,
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Divider(
-                    color: green,
-                    indent: 10,
-                    endIndent: 20,
-                    thickness: 2,
+                  Expanded(
+                    child: Divider(
+                      color: green,
+                      indent: 10,
+                      endIndent: 20,
+                      thickness: 2,
+                    ),
                   ),
-                ),
-              ]),
-              SizedBox(
-                height: 16,
+                ]),
               ),
               ElButtonIcon(
                 titel: 'Continue with google',
                 icon: 'googel.png',
-                action: LoginScreen(),
                 sideColor: green,
                 color: white,
               ),
@@ -145,7 +140,6 @@ class SignupScreen extends StatelessWidget {
               ElButtonIcon(
                 titel: 'Continue with apple',
                 icon: 'iphone.png',
-                action: LoginScreen(),
                 sideColor: green,
                 color: white,
               ),
@@ -155,7 +149,6 @@ class SignupScreen extends StatelessWidget {
               ElButtonIcon(
                 titel: 'Continue with facebook',
                 icon: 'facebook.png',
-                action: LoginScreen(),
                 sideColor: green,
                 color: white,
               ),
