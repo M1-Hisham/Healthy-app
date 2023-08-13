@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthy/screens/home2_screen.dart';
 import '../colors.dart';
 import '../font_size.dart';
 
@@ -13,40 +14,43 @@ class ContainerCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: EdgeInsets.only(bottom: 10, top: 10),
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: black.withAlpha(50),
-              //spreadRadius: 1,
-              blurRadius: 10,
-              offset: Offset(0, 4), // changes position of shadow
-            ),
-          ],
-          //color: white,
-          borderRadius: BorderRadius.circular(10),
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, HomeTScreen.routes),
+      child: Center(
+        child: Container(
+          margin: EdgeInsets.only(bottom: 10, top: 10),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: black.withAlpha(50),
+                //spreadRadius: 1,
+                blurRadius: 10,
+                offset: Offset(0, 4), // changes position of shadow
+              ),
+            ],
+            //color: white,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Stack(alignment: Alignment.center, children: [
+            Image.asset('assets/images/$image'),
+            Text(
+              tital,
+              style: TextStyle(
+                fontFamily: "Inter",
+                fontSize: h1,
+                fontWeight: w800,
+                color: white,
+              ),
+            )
+          ]),
         ),
-        child: Stack(alignment: Alignment.center, children: [
-          Image.asset('assets/images/$image'),
-          Text(
-            tital,
-            style: TextStyle(
-              fontFamily: "Inter",
-              fontSize: h1,
-              fontWeight: w800,
-              color: white,
-            ),
-          )
-        ]),
       ),
     );
   }
 }
 
 class ContainerTopRated extends StatelessWidget {
-  const ContainerTopRated({
+  ContainerTopRated({
     super.key,
     required this.image,
   });

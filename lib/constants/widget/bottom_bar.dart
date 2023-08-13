@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
+import 'package:healthy/screens/addPicture_screen.dart';
+import 'package:healthy/screens/home_screen.dart';
+import 'package:healthy/screens/menu_screen.dart';
+import 'package:healthy/screens/profile_screen.dart';
+
+import '../method/navigator.dart';
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key});
-  static int index = 2;
+  BottomNavBar({super.key, required this.index});
+  final int index;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -16,21 +22,22 @@ class BottomNavBar extends StatelessWidget {
           backgroundColor: green,
           selectedItemColor: white,
           type: BottomNavigationBarType.fixed,
-          currentIndex: 1,
+          currentIndex: index,
           onTap: (value) {
             if (value == 0) {
-              index = value;
-              // navPush(context: context, screen: LoginScreen());
+              navPushReplacement(context: context, screen: MenuScreen());
             } else if (value == 1) {
-              index = value;
-              // navPush(context: context, screen: HomeScreen());
+              navPushReplacement(context: context, screen: AddPicture());
             } else if (value == 2) {
-              index = value;
+              navPushReplacement(context: context, screen: HomeScreen());
             } else if (value == 3) {
-              index = value;
+            } else if (value == 4) {
+              navPushReplacement(context: context, screen: ProfileScreen());
             }
           },
           items: const [
+            BottomNavigationBarItem(
+                icon: Icon(FontAwesomeIcons.bars), label: 'Menu'),
             BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.circlePlus),
               label: 'Add',
@@ -51,56 +58,3 @@ class BottomNavBar extends StatelessWidget {
     );
   }
 }
-
-// class BottomNavBar extends StatelessWidget {
-//   BottomNavBar({super.key, this.selectedItemColor});
-//   static int index = 3;
-//   Color? selectedItemColor;
-//   @override
-//   Widget build(BuildContext context) {
-//     return ClipRRect(
-//       borderRadius: BorderRadius.only(
-//           topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-//       child: BottomNavigationBar(
-//         backgroundColor: Color.fromARGB(48, 145, 145, 145),
-//         unselectedItemColor: grey,
-//         selectedItemColor: selectedItemColor ?? orange,
-//         onTap: (value) {
-//           if (value == 0) {
-//             index = value;
-//             navPushReplacement(context: context, screen: HomeScreen());
-//           } else if (value == 1) {
-//             index = value;
-//             navPushReplacement(context: context, screen: MyFriendsScreen());
-//           } else if (value == 2) {
-//             index = value;
-//             navPushReplacement(context: context, screen: GroupsScreen());
-//           } else if (value == 3) {
-//             index = value;
-//             navPushReplacement(context: context, screen: ProfileScreen());
-//           }
-//         },
-//         type: BottomNavigationBarType.fixed,
-//         currentIndex: index,
-//         items: [
-//           BottomNavigationBarItem(
-//             icon: Icon(Icons.home),
-//             label: 'home',
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(FontAwesomeIcons.globe),
-//             label: 'net',
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(FontAwesomeIcons.userGroup),
-//             label: 'group',
-//           ),
-//           BottomNavigationBarItem(
-//             icon: Icon(FontAwesomeIcons.user),
-//             label: "user",
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

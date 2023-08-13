@@ -9,7 +9,7 @@ import 'package:healthy/screens/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
-
+  static const routes = '/LogingScreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,15 +45,13 @@ class LoginScreen extends StatelessWidget {
                     textcolor: white,
                     fontSize: h1,
                     FontWeight: w700,
-                    onPressed: SignupScreen(),
-                  ),
+                  onPressed: SignupScreen.routes),
                   SizedBox(
                     height: 38,
                   ),
                   ElButtonIcon(
                     titel: 'Continue with google',
                     icon: 'googel.png',
-                    action: LoginScreen(),
                     sideColor: green,
                     color: white,
                   ),
@@ -63,7 +61,6 @@ class LoginScreen extends StatelessWidget {
                   ElButtonIcon(
                     titel: 'Continue with apple',
                     icon: 'iphone.png',
-                    action: LoginScreen(),
                     sideColor: green,
                     color: white,
                   ),
@@ -73,7 +70,6 @@ class LoginScreen extends StatelessWidget {
                   ElButtonIcon(
                     titel: 'Continue with facebook',
                     icon: 'facebook.png',
-                    action: LoginScreen(),
                     sideColor: green,
                     color: white,
                   ),
