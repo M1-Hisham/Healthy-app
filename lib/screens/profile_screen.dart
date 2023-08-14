@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
-
 import '../constants/font_size.dart';
+import '../constants/widget/El_button.dart';
 import '../constants/widget/bottom_bar.dart';
+import '../constants/widget/container.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
   static const routes = "/ProfileScreen";
+  static List<String> img = [
+    'Thai Red Lentil Soup [vegan] 1.png',
+    'Sticky Asian Grilled Chicken 2.png',
+    'Pesto Quinoa Wraps 3.png',
+    'Little Cravings 1.png',
+    'Vegane Rezepte.png',
+    'Weekend 1.png',
+    'Thai Red Lentil Soup [vegan] 1.png',
+    'Sticky Asian Grilled Chicken 2.png',
+    'Pesto Quinoa Wraps 3.png',
+    'Little Cravings 1.png',
+    'Vegane Rezepte.png',
+    'Weekend 1.png',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,13 +53,177 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-          child: Text(
-        "profile\nsoon",
-        textAlign: TextAlign.center,
-        style:
-            TextStyle(color: green, fontWeight: FontWeight.bold, fontSize: 50),
-      )),
+      body: Padding(
+        padding: const EdgeInsets.all(13),
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            //code in box padding
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: Column(children: [
+                Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                      'assets/images/mohamed.JPEG',
+                    ),
+                    radius: 50,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Mohamed Hisham",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: w600,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 11,
+                          ),
+                          Row(children: [
+                            Image.asset('assets/icons/location.png'),
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Text(
+                              "Egypt",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: w600,
+                              ),
+                            ),
+                          ]),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Container(
+                            width: 190,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Image.asset(
+                                  "assets/icons/linkedin.png",
+                                ),
+                                Image.asset(
+                                  "assets/icons/instagram.png",
+                                ),
+                                Image.asset(
+                                  "assets/icons/facebook2.png",
+                                ),
+                                Image.asset(
+                                  "assets/icons/X.png",
+                                ),
+                              ],
+                            ),
+                          ),
+                        ]),
+                  ),
+                ]),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 22, horizontal: 55),
+                  child: ElButton(
+                    height: 28,
+                    color: green,
+                    name: 'Edit Profile',
+                    fontSize: 20.0,
+                    textcolor: white,
+                    FontWeight: w600,
+                    onPressed: ProfileScreen.routes,
+                    sideColor: green,
+                  ),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "Recipes",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: w500,
+                        ),
+                      ),
+                      Text(
+                        "Followers",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: w500,
+                        ),
+                      ),
+                      Text(
+                        "Following",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: w500,
+                        ),
+                      ),
+                    ]),
+                SizedBox(
+                  height: 7,
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "44",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: w700,
+                        ),
+                      ),
+                      Text(
+                        "444",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: w700,
+                        ),
+                      ),
+                      Text(
+                        "444",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: w700,
+                        ),
+                      ),
+                    ]),
+              ]),
+            ),
+            SizedBox(
+              height: 17,
+            ),
+            Text(
+              "Recipes",
+              style: TextStyle(
+                fontFamily: "Inter",
+                fontSize: 18,
+                fontWeight: w700,
+                color: black,
+              ),
+              textAlign: TextAlign.start,
+            ),
+            GridView.builder(
+              itemCount: img.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                //crossAxisSpacing: 20.0,
+                crossAxisCount: 2,
+              ),
+              itemBuilder: (context, index) {
+                return ContainerTopRated(
+                  image: img.toList()[index],
+                );
+              },
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              //padding: EdgeInsets.all(20),
+            ),
+          ]),
+        ),
+      ),
       bottomNavigationBar: BottomNavBar(index: 4),
     );
   }
