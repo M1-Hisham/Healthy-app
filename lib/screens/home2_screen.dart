@@ -56,60 +56,58 @@ class HomeTScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextField(
-                cursorColor: green,
-                decoration: InputDecoration(
-                  prefixIcon: const Padding(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Icon(
-                      FontAwesomeIcons.magnifyingGlass,
-                      color: green,
-                    ),
-                  ),
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 26),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: green, width: 2.0),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: green, width: 1.5),
-                    borderRadius: BorderRadius.circular(30),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            TextField(
+              cursorColor: green,
+              decoration: InputDecoration(
+                prefixIcon: const Padding(
+                  padding: EdgeInsets.only(left: 15),
+                  child: Icon(
+                    FontAwesomeIcons.magnifyingGlass,
+                    color: green,
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 17,
-              ),
-              Text(
-                "Lunch & Dinner",
-                style: TextStyle(
-                  fontFamily: "Inter",
-                  fontSize: 18,
-                  fontWeight: w700,
-                  color: black,
+                contentPadding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 26),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(color: green, width: 2.0),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(color: green, width: 1.5),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
-              GridView.builder(
-                itemCount: img.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //crossAxisSpacing: 20.0,
-                  crossAxisCount: 2,
-                ),
-                itemBuilder: (context, index) {
-                  return ContainerTopRated(
-                    image: img.toList()[index],
-                  );
-                },
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                //padding: EdgeInsets.all(20),
+            ),
+            SizedBox(
+              height: 17,
+            ),
+            Text(
+              "Lunch & Dinner",
+              style: TextStyle(
+                fontFamily: "Inter",
+                fontSize: 18,
+                fontWeight: w700,
+                color: black,
               ),
-            ],
-          ),
+            ),
+            GridView.builder(
+              itemCount: img.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                //crossAxisSpacing: 20.0,
+                crossAxisCount: 2,
+              ),
+              itemBuilder: (context, index) {
+                return ContainerTopRated(
+                  image: img.toList()[index],
+                );
+              },
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              //padding: EdgeInsets.all(20),
+            ),
+          ]),
         ),
       ),
       bottomNavigationBar: BottomNavBar(index: 2),

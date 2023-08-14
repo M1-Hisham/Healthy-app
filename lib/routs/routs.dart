@@ -6,7 +6,6 @@ import 'package:healthy/screens/menu_screen.dart';
 import 'package:healthy/screens/profile_screen.dart';
 import 'package:healthy/screens/signup_screen.dart';
 import 'package:healthy/screens/user_screen.dart';
-
 import '../screens/home2_screen.dart';
 
 Map<String, WidgetBuilder> routes = {

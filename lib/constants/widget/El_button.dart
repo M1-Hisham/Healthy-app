@@ -14,6 +14,7 @@ class ElButton extends StatelessWidget {
     required this.fontSize,
     this.FontWeight,
     this.sideColor,
+    this.height,
     required this.onPressed,
   });
   final String name;
@@ -22,12 +23,13 @@ class ElButton extends StatelessWidget {
   final double fontSize;
   final FontWeight;
   final Color? sideColor;
-  final onPressed;
+  final String onPressed;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 41,
+        height: height ?? 38,
         width: double.infinity,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
