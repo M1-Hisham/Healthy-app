@@ -4,11 +4,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
 import 'package:healthy/constants/font_size.dart';
 import 'package:healthy/screens/addPicture_screen.dart';
-import 'package:healthy/screens/menu_screen.dart';
 import 'package:healthy/screens/profile_screen.dart';
 
 import '../constants/method/navigator.dart';
 import '../constants/widget/container.dart';
+import '../constants/widget/main_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,14 +17,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MainDrawer(),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(FontAwesomeIcons.bars),
-          color: green,
-          onPressed: () {
-            Navigator.pushNamed(context, MenuScreen.routes);
-          },
-        ),
+        leading: Builder(builder: (BuildContext context) {
+          return IconButton(
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            icon: Icon(FontAwesomeIcons.bars),
+            color: green,
+            onPressed: () {
+              // Navigator.pushNamed(context, MenuScreen.routes);
+              Scaffold.of(context).openDrawer();
+            },
+          );
+        }),
         backgroundColor: white2,
         shadowColor: green,
         elevation: 2,

@@ -82,7 +82,7 @@ class SignupScreen extends StatelessWidget {
                 color: green,
                 textcolor: white,
                 fontSize: h1,
-                onPressed: HomeScreen.routes,
+                onPressed: HomeScreen(),
                 FontWeight: w700,
               ),
               SizedBox(
