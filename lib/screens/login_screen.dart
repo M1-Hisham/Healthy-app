@@ -45,7 +45,8 @@ class LoginScreen extends StatelessWidget {
                     textcolor: white,
                     fontSize: h1,
                     FontWeight: w700,
-                  onPressed: SignupScreen.routes),
+                    onPressed: SignupScreen(),
+                  ),
                   SizedBox(
                     height: 38,
                   ),

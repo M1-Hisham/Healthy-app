@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
 import 'package:healthy/screens/addPicture_screen.dart';
 import 'package:healthy/screens/home_screen.dart';
-import 'package:healthy/screens/menu_screen.dart';
 import 'package:healthy/screens/profile_screen.dart';
 
 import '../method/navigator.dart';
@@ -25,7 +24,7 @@ class BottomNavBar extends StatelessWidget {
           currentIndex: index,
           onTap: (value) {
             if (value == 0) {
-              navPushReplacement(context: context, screen: MenuScreen());
+              Scaffold.of(context).openDrawer();
             } else if (value == 1) {
               navPushReplacement(context: context, screen: AddPicture());
             } else if (value == 2) {

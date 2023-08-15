@@ -1,9 +1,9 @@
-// ignore_for_file: non_constant_identifier_names, prefer_typing_uninitialized_variables
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:healthy/constants/font_size.dart';
 
 import '../colors.dart';
+import '../method/navigator.dart';
 
 class ElButton extends StatelessWidget {
   const ElButton({
@@ -15,6 +15,7 @@ class ElButton extends StatelessWidget {
     this.FontWeight,
     this.sideColor,
     this.height,
+    this.width,
     required this.onPressed,
   });
   final String name;
@@ -23,14 +24,15 @@ class ElButton extends StatelessWidget {
   final double fontSize;
   final FontWeight;
   final Color? sideColor;
-  final String onPressed;
+  final Widget onPressed;
   final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
         height: height ?? 38,
-        width: double.infinity,
+        width: width ?? double.infinity,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             side: BorderSide(color: sideColor ?? green, width: 2),
@@ -49,7 +51,8 @@ class ElButton extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            Navigator.pushNamed(context, onPressed);
+            navPushReplacement(context: context, screen: onPressed);
+            // onPressed;
           },
         ));
   }

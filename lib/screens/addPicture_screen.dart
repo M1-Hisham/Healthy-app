@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
 import '../constants/font_size.dart';
 import '../constants/widget/bottom_bar.dart';
+import '../constants/widget/main_drawer.dart';
 
 class AddPicture extends StatelessWidget {
   const AddPicture({super.key});
@@ -10,6 +11,7 @@ class AddPicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MainDrawer(),
       appBar: AppBar(
         leading: BackButton(
           color: green,

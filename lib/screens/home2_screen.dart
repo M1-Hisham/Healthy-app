@@ -6,6 +6,8 @@ import 'package:healthy/constants/font_size.dart';
 import 'package:healthy/constants/widget/bottom_bar.dart';
 import 'package:healthy/constants/widget/container.dart';
 
+import '../constants/widget/main_drawer.dart';
+
 class HomeTScreen extends StatelessWidget {
   const HomeTScreen({super.key});
   static const routes = '/HomeTScreen';
@@ -26,6 +28,7 @@ class HomeTScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MainDrawer(),
       appBar: AppBar(
         leading: BackButton(
           color: green,

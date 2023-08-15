@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void navPush({required BuildContext context,required Widget screen}) {
+void navPush({required BuildContext context, required Widget screen}) {
   Navigator.push(
     context,
     MaterialPageRoute(
@@ -8,8 +8,9 @@ void navPush({required BuildContext context,required Widget screen}) {
     ),
   );
 }
+
 //pop
-void navPop({required BuildContext context,required Widget screen}) {
+void navPop({required BuildContext context, required Widget screen}) {
   Navigator.pop(
     context,
     MaterialPageRoute(
@@ -17,8 +18,10 @@ void navPop({required BuildContext context,required Widget screen}) {
     ),
   );
 }
+
 //pushReplacement
-void navPushReplacement({required BuildContext context,required Widget screen}) {
+void navPushReplacement(
+    {required BuildContext context, required Widget screen}) {
   Navigator.pushReplacement(
     context,
     MaterialPageRoute(
