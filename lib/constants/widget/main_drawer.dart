@@ -14,52 +14,50 @@ class MainDrawer extends StatelessWidget {
       elevation: 0,
       width: 230,
       backgroundColor: Colors.transparent,
-      child: Expanded(
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-              topRight: Radius.elliptical(400, 800),
-              bottomRight: Radius.elliptical(400, 800)),
-          child: Container(
-            color: green,
-            child: SafeArea(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  BackButton(
-                    color: white,
-                    style: ButtonStyle(),
-                  ),
-                  Divider(
-                    color: white,
-                    thickness: 2,
-                  ),
-                  TextMenu('Account'),
-                  Divider(
-                    color: white,
-                    thickness: 2,
-                  ),
-                  TextMenu("My Favourites"),
-                  Divider(
-                    color: white,
-                    thickness: 2,
-                  ),
-                  TextMenu("Privacy"),
-                  Divider(
-                    color: white,
-                    thickness: 2,
-                  ),
-                  TextMenu("Settings"),
-                  Divider(
-                    color: white,
-                    thickness: 2,
-                  ),
-                  TextMenu("About"),
-                  Divider(
-                    color: white,
-                    thickness: 2,
-                  ),
-                ],
-              ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+            topRight: Radius.elliptical(400, 800),
+            bottomRight: Radius.elliptical(400, 800)),
+        child: Container(
+          color: green,
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                BackButton(
+                  color: white,
+                  style: ButtonStyle(),
+                ),
+                Divider(
+                  color: white,
+                  thickness: 2,
+                ),
+                TextMenu('Account'),
+                Divider(
+                  color: white,
+                  thickness: 2,
+                ),
+                TextMenu("My Favourites"),
+                Divider(
+                  color: white,
+                  thickness: 2,
+                ),
+                TextMenu("Privacy"),
+                Divider(
+                  color: white,
+                  thickness: 2,
+                ),
+                TextMenu("Settings"),
+                Divider(
+                  color: white,
+                  thickness: 2,
+                ),
+                TextMenu("About"),
+                Divider(
+                  color: white,
+                  thickness: 2,
+                ),
+              ],
             ),
           ),
         ),
