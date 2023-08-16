@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   final int index = 1;
   static const routes = '/HomeScreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -161,7 +162,7 @@ class HomeScreen extends StatelessWidget {
               if (value == 0) {
                 navPush(context: context, screen: AddPicture());
               } else if (value == 1) {
-                navPush(context: context, screen: HomeScreen());
+                navPushReplacement(context: context, screen: HomeScreen());
               } else if (value == 2) {
               } else if (value == 3) {
                 navPush(context: context, screen: ProfileScreen());
