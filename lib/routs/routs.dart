@@ -9,12 +9,12 @@ import 'package:healthy/screens/user_screen.dart';
 import '../screens/home2_screen.dart';
 
 Map<String, WidgetBuilder> routes = {
-  LoginScreen.routes: (context) => LoginScreen(),
-  SignupScreen.routes: (context) => SignupScreen(),
-  HomeScreen.routes: (context) => HomeScreen(),
-  HomeTScreen.routes: (context) => HomeTScreen(),
-  RecipesScreen.routes: (context) => RecipesScreen(),
-  ProfileScreen.routes: (context) => ProfileScreen(),
-  UserScreen.routes: (context) => UserScreen(),
-  AddPicture.routes: (context) => AddPicture(),
+  LoginScreen.routes: (context) => const LoginScreen(),
+  SignupScreen.routes: (context) => const SignupScreen(),
+  HomeScreen.routes: (context) => const HomeScreen(),
+  HomeTScreen.routes: (context) => const HomeTScreen(),
+  RecipesScreen.routes: (context) => const RecipesScreen(),
+  ProfileScreen.routes: (context) => const ProfileScreen(),
+  UserScreen.routes: (context) => const UserScreen(),
+  AddPicture.routes: (context) => const AddPicture(),
 };

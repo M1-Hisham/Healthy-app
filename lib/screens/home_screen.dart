@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
 import 'package:healthy/constants/font_size.dart';
@@ -18,12 +17,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       appBar: AppBar(
         leading: Builder(builder: (BuildContext context) {
           return IconButton(
             tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            icon: Icon(FontAwesomeIcons.bars),
+            icon: const Icon(FontAwesomeIcons.bars),
             color: green,
             onPressed: () {
               // Navigator.pushNamed(context, MenuScreen.routes);
@@ -36,7 +35,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 2,
         actions: [
           IconButton(
-            icon: Icon(FontAwesomeIcons.solidBell),
+            icon: const Icon(FontAwesomeIcons.solidBell),
             color: green,
             onPressed: () {},
           ),
@@ -81,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 17,
             ),
             Text(
@@ -93,10 +92,10 @@ class HomeScreen extends StatelessWidget {
                 color: black,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 17,
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
@@ -112,12 +111,12 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Text(
+            const Text(
               "Categories",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: "Inter",
                 fontSize: 18,
                 fontWeight: FontWeight.w700,
@@ -125,22 +124,22 @@ class HomeScreen extends StatelessWidget {
                 height: 20 / 18,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 19,
             ),
-            ContainerCategories(
+            const ContainerCategories(
               image: 'Creamy Vanilla Matcha Oatmeal 1.png',
               tital: 'Breakfast',
             ),
-            ContainerCategories(
+            const ContainerCategories(
               image: 'Guidelines 2.png',
               tital: 'Lunch & Dinner',
             ),
-            ContainerCategories(
+            const ContainerCategories(
               image: '3.png',
               tital: 'Desserts',
             ),
-            ContainerCategories(
+            const ContainerCategories(
               image: 'Drink 4.png',
               tital: 'Drinks',
             ),
@@ -160,12 +159,12 @@ class HomeScreen extends StatelessWidget {
             currentIndex: index,
             onTap: (value) {
               if (value == 0) {
-                navPush(context: context, screen: AddPicture());
+                navPush(context: context, screen: const AddPicture());
               } else if (value == 1) {
-                navPushReplacement(context: context, screen: HomeScreen());
+                navPushReplacement(context: context, screen: const HomeScreen());
               } else if (value == 2) {
               } else if (value == 3) {
-                navPush(context: context, screen: ProfileScreen());
+                navPush(context: context, screen: const ProfileScreen());
               }
             },
             items: const [

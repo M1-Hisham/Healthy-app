@@ -14,9 +14,9 @@ class RecipesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       appBar: AppBar(
-        leading: BackButton(
+        leading: const BackButton(
           color: green,
           // <-- SEE HERE
         ),
@@ -25,7 +25,7 @@ class RecipesScreen extends StatelessWidget {
         elevation: 2,
         actions: [
           IconButton(
-            icon: Icon(FontAwesomeIcons.solidBell),
+            icon: const Icon(FontAwesomeIcons.solidBell),
             color: green,
             onPressed: () {},
           ),
@@ -47,7 +47,7 @@ class RecipesScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 255,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/images/Lentil Soup .png"),
                 fit: BoxFit.cover,
@@ -56,7 +56,7 @@ class RecipesScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -94,18 +94,18 @@ class RecipesScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(
+                const Icon(
                   FontAwesomeIcons.heart,
                   size: 20,
                 ),
               ]),
-              SizedBox(
+              const SizedBox(
                 height: 33,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(
+                  const Icon(
                     FontAwesomeIcons.fire,
                     color: green,
                     size: 18,
@@ -115,7 +115,7 @@ class RecipesScreen extends StatelessWidget {
                         fontSize: 15,
                         fontWeight: w500,
                       )),
-                  Icon(
+                  const Icon(
                     FontAwesomeIcons.stopwatch,
                     color: green,
                     size: 18,
@@ -125,7 +125,7 @@ class RecipesScreen extends StatelessWidget {
                         fontSize: 15,
                         fontWeight: w500,
                       )),
-                  Icon(
+                  const Icon(
                     FontAwesomeIcons.userGroup,
                     color: green,
                     size: 15,
@@ -137,24 +137,24 @@ class RecipesScreen extends StatelessWidget {
                       )),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               InkWell(
                 onTap: () =>
-                    navPushReplacement(context: context, screen: UserScreen()),
+                    navPushReplacement(context: context, screen: const UserScreen()),
                 child: SizedBox(
                   child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           backgroundImage: AssetImage(
                             'assets/images/saif .png',
                           ),
                           radius: 25,
                         ),
                         Padding(
-                          padding: EdgeInsets.all(15),
+                          padding: const EdgeInsets.all(15),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -169,7 +169,7 @@ class RecipesScreen extends StatelessWidget {
                 ),
               ),
               //////////////
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text("Ingredients:",
@@ -178,7 +178,7 @@ class RecipesScreen extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: w700,
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               /////////////
@@ -192,7 +192,7 @@ class RecipesScreen extends StatelessWidget {
                           Row(
                             children: [
                               Image.asset('assets/icons/PUL004 1.png'),
-                              Text(" 200gm yellow lentil",
+                              const Text(" 200gm yellow lentil",
                                   style: TextStyle(
                                     color: green,
                                     fontWeight: FontWeight.bold,
@@ -201,7 +201,7 @@ class RecipesScreen extends StatelessWidget {
                           ),
                           Row(children: [
                             Image.asset('assets/icons/R 1.png'),
-                            Text(" 3 Carrots",
+                            const Text(" 3 Carrots",
                                 style: TextStyle(
                                   color: green,
                                   fontWeight: FontWeight.bold,
@@ -215,7 +215,7 @@ class RecipesScreen extends StatelessWidget {
                             children: [
                               Image.asset(
                                   'assets/icons/cup-of-blue-water-th 1.png'),
-                              Text(" 200ml water",
+                              const Text(" 200ml water",
                                   style: TextStyle(
                                     color: green,
                                     fontWeight: FontWeight.bold,
@@ -224,7 +224,7 @@ class RecipesScreen extends StatelessWidget {
                           ),
                           Row(children: [
                             Image.asset('assets/icons/OIP 2.png'),
-                            Text("  3 Tomatoes",
+                            const Text("  3 Tomatoes",
                                 style: TextStyle(
                                   color: green,
                                   fontWeight: FontWeight.bold,
@@ -237,7 +237,7 @@ class RecipesScreen extends StatelessWidget {
                           Row(
                             children: [
                               Image.asset('assets/icons/OIF 1.png'),
-                              Text("  2 Large Onions",
+                              const Text("  2 Large Onions",
                                   style: TextStyle(
                                     color: green,
                                     fontWeight: FontWeight.bold,
@@ -246,7 +246,7 @@ class RecipesScreen extends StatelessWidget {
                           ),
                           Row(children: [
                             Image.asset('assets/icons/OIP (1) 1.png'),
-                            Text(" 1tps salt",
+                            const Text(" 1tps salt",
                                 style: TextStyle(
                                   color: green,
                                   fontWeight: FontWeight.bold,
@@ -259,7 +259,7 @@ class RecipesScreen extends StatelessWidget {
                           Row(
                             children: [
                               Image.asset('assets/icons/GEB2255 1.png'),
-                              Text("  200gm yellow lentil",
+                              const Text("  200gm yellow lentil",
                                   style: TextStyle(
                                     color: green,
                                     fontWeight: FontWeight.bold,
@@ -270,7 +270,7 @@ class RecipesScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -282,45 +282,45 @@ class RecipesScreen extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              RowText(
+              const RowText(
                 icon: FontAwesomeIcons.one,
                 text:
                     "Heat oil in a large pot over medium heat. Add garlic and onion, cook for 2 minutes.",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              RowText(
+              const RowText(
                   icon: FontAwesomeIcons.two,
                   text:
                       "Add celery and carrot.Cook for 7 - 10 minutes or until softened and the onion is sweet. Don't rush this step, it is key to the flavour base of the soup."),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              RowText(
+              const RowText(
                 icon: FontAwesomeIcons.three,
                 text:
                     "Add all remaining ingredients except the lemon and salt. Stir. ",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              RowText(
+              const RowText(
                 icon: FontAwesomeIcons.four,
                 text:
                     "Increase heat and bring to simmer. Scoop scum on the surface off and discard (do this again during cooking if required). Place lid on and turn heat down to medium low. Simmer for 35 - 40 minutes or until lentils are soft.",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              RowText(icon: FontAwesomeIcons.five, text: "Remove bay leaves."),
-              SizedBox(
+              const RowText(icon: FontAwesomeIcons.five, text: "Remove bay leaves."),
+              const SizedBox(
                 height: 20,
               ),
-              RowText(
+              const RowText(
                 icon: FontAwesomeIcons.six,
                 text:
                     "Thicken Soup: Using a stick blender, do 2 or 3 quick whizzes to thicken the soup (see video below). Or transfer 2 cups to a blender, let it cool slightly, then hold lid with tea towel and blend then transfer back into pot.",

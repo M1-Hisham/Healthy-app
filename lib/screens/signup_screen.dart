@@ -17,7 +17,7 @@ class SignupScreen extends StatelessWidget {
             Container(
               height: 230,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: green,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(185),
@@ -46,35 +46,35 @@ class SignupScreen extends StatelessWidget {
                     fontFamily: "Inter",
                     fontSize: h1,
                     fontWeight: w700,
-                    color: Color(0xff1ec334),
+                    color: const Color(0xff1ec334),
                     height: 23 / 24,
                   ),
                   textAlign: TextAlign.left,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 36,
               ),
-              TextsField(
+              const TextsField(
                 textInputType: TextInputType.name,
                 text: 'Name',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TextsField(
+              const TextsField(
                 textInputType: TextInputType.emailAddress,
                 text: 'E-mail',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TextsField(
+              const TextsField(
                 textInputType: TextInputType.visiblePassword,
                 text: 'Password',
                 pas: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 36,
               ),
               ElButton(
@@ -82,10 +82,10 @@ class SignupScreen extends StatelessWidget {
                 color: green,
                 textcolor: white,
                 fontSize: h1,
-                onPressed: HomeScreen(),
+                onPressed: const HomeScreen(),
                 FontWeight: w700,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Text(
@@ -99,9 +99,9 @@ class SignupScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 14),
+                padding: const EdgeInsets.symmetric(vertical: 14),
                 child: Row(children: [
-                  Expanded(
+                  const Expanded(
                     child: Divider(
                       color: green,
                       indent: 20,
@@ -118,7 +118,7 @@ class SignupScreen extends StatelessWidget {
                       color: green,
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Divider(
                       color: green,
                       indent: 10,
@@ -128,25 +128,25 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ]),
               ),
-              ElButtonIcon(
+              const ElButtonIcon(
                 titel: 'Continue with google',
                 icon: 'googel.png',
                 sideColor: green,
                 color: white,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 19,
               ),
-              ElButtonIcon(
+              const ElButtonIcon(
                 titel: 'Continue with apple',
                 icon: 'iphone.png',
                 sideColor: green,
                 color: white,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 19,
               ),
-              ElButtonIcon(
+              const ElButtonIcon(
                 titel: 'Continue with facebook',
                 icon: 'facebook.png',
                 sideColor: green,

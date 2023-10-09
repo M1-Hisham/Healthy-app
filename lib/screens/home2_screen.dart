@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:healthy/constants/colors.dart';
 import 'package:healthy/constants/font_size.dart';
@@ -28,9 +27,9 @@ class HomeTScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       appBar: AppBar(
-        leading: BackButton(
+        leading: const BackButton(
           color: green,
           // <-- SEE HERE
         ),
@@ -39,7 +38,7 @@ class HomeTScreen extends StatelessWidget {
         elevation: 2,
         actions: [
           IconButton(
-            icon: Icon(FontAwesomeIcons.solidBell),
+            icon: const Icon(FontAwesomeIcons.solidBell),
             color: green,
             onPressed: () {},
           ),
@@ -83,7 +82,7 @@ class HomeTScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 17,
             ),
             Text(
@@ -97,7 +96,7 @@ class HomeTScreen extends StatelessWidget {
             ),
             GridView.builder(
               itemCount: img.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 //crossAxisSpacing: 20.0,
                 crossAxisCount: 2,
               ),
@@ -107,7 +106,7 @@ class HomeTScreen extends StatelessWidget {
                 );
               },
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               //padding: EdgeInsets.all(20),
             ),
           ]),

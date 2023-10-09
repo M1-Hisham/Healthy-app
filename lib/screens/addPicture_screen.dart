@@ -12,9 +12,9 @@ class AddPicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       appBar: AppBar(
-        leading: BackButton(
+        leading: const BackButton(
           color: green,
           // <-- SEE HERE
         ),
@@ -23,7 +23,7 @@ class AddPicture extends StatelessWidget {
         elevation: 2,
         actions: [
           IconButton(
-            icon: Icon(FontAwesomeIcons.solidBell),
+            icon: const Icon(FontAwesomeIcons.solidBell),
             color: green,
             onPressed: () {},
           ),
@@ -45,14 +45,14 @@ class AddPicture extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 50),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Center(
+            const Center(
               child: Icon(
                 FontAwesomeIcons.circlePlus,
                 color: gray,
                 size: 150,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Center(
@@ -65,10 +65,10 @@ class AddPicture extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
-            Divider(
+            const Divider(
               color: green,
               thickness: 1.2,
             ),
@@ -77,11 +77,11 @@ class AddPicture extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedTextField(width: 100, height: 25),
-                  SizedBox(
+                  const SizedTextField(width: 100, height: 25),
+                  const SizedBox(
                     height: 30,
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Icon(
@@ -104,7 +104,7 @@ class AddPicture extends StatelessWidget {
                       SizedTextField(width: 28, height: 20),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -115,31 +115,31 @@ class AddPicture extends StatelessWidget {
                       fontWeight: w700,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
                     child: RowText(
                       icon: FontAwesomeIcons.one,
                       height: 25,
                       width: 150,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
                     child: RowText(
                       icon: FontAwesomeIcons.two,
                       height: 25,
                       width: 150,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
                     child: RowText(
                       icon: FontAwesomeIcons.three,
                       height: 25,
                       width: 150,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -150,30 +150,30 @@ class AddPicture extends StatelessWidget {
                       fontWeight: w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  RowText(
+                  const RowText(
                     icon: FontAwesomeIcons.one,
                     height: 100,
                     width: 230,
                   ),
-                  RowText(
+                  const RowText(
                     icon: FontAwesomeIcons.two,
                     height: 100,
                     width: 230,
                   ),
-                  RowText(
+                  const RowText(
                     icon: FontAwesomeIcons.three,
                     height: 100,
                     width: 230,
                   ),
-                  RowText(
+                  const RowText(
                     icon: FontAwesomeIcons.four,
                     height: 100,
                     width: 230,
                   ),
-                  RowText(
+                  const RowText(
                     icon: FontAwesomeIcons.five,
                     height: 100,
                     width: 230,
@@ -185,7 +185,7 @@ class AddPicture extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElButton(
-                  onPressed: AddPicture(),
+                  onPressed: const AddPicture(),
                   width: 130,
                   height: 26,
                   color: white,
@@ -196,7 +196,7 @@ class AddPicture extends StatelessWidget {
                   sideColor: black,
                 ),
                 ElButton(
-                  onPressed: AddPicture(),
+                  onPressed: const AddPicture(),
                   width: 130,
                   height: 26,
                   color: green,
@@ -238,12 +238,12 @@ class SizedTextField extends StatelessWidget {
             fontSize: 14,
             fontWeight: w600,
           ),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               color: gray,
             ),
           ),
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
               //borderSide: BorderSide(color: gray, width: 2),
               ),
         ),
@@ -272,7 +272,7 @@ class RowText extends StatelessWidget {
           color: green,
           size: 25,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         SizedTextField(width: width, height: height)

@@ -27,9 +27,9 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       appBar: AppBar(
-        leading: BackButton(
+        leading: const BackButton(
           color: green,
           // <-- SEE HERE
         ),
@@ -38,7 +38,7 @@ class ProfileScreen extends StatelessWidget {
         elevation: 2,
         actions: [
           IconButton(
-            icon: Icon(FontAwesomeIcons.solidBell),
+            icon: const Icon(FontAwesomeIcons.solidBell),
             color: green,
             onPressed: () {},
           ),
@@ -58,22 +58,22 @@ class ProfileScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(13),
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             //code in box padding
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Column(children: [
                 Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     backgroundImage: AssetImage(
                       'assets/images/mohamed.JPEG',
                     ),
                     radius: 50,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -84,14 +84,12 @@ class ProfileScreen extends StatelessWidget {
                               fontWeight: w600,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 11,
                           ),
                           Row(children: [
                             Image.asset('assets/icons/location.png'),
-                            SizedBox(
-                              width: 7,
-                            ),
+                            const SizedBox(width: 7),
                             Text(
                               "Egypt",
                               style: TextStyle(
@@ -100,11 +98,9 @@ class ProfileScreen extends StatelessWidget {
                               ),
                             ),
                           ]),
+                          const SizedBox(height: 16),
                           SizedBox(
-                            height: 16,
-                          ),
-                          Container(
-                            width: 190,
+                            width: 150,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -137,7 +133,7 @@ class ProfileScreen extends StatelessWidget {
                     textcolor: white,
                     FontWeight: w600,
                     sideColor: green,
-                    onPressed: ProfileScreen(),
+                    onPressed: const ProfileScreen(),
                   ),
                 ),
                 Row(
@@ -165,9 +161,7 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ),
                     ]),
-                SizedBox(
-                  height: 7,
-                ),
+                const SizedBox(height: 7),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -195,7 +189,7 @@ class ProfileScreen extends StatelessWidget {
                     ]),
               ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 17,
             ),
             Text(
@@ -210,7 +204,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             GridView.builder(
               itemCount: img.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 //crossAxisSpacing: 20.0,
                 crossAxisCount: 2,
               ),
@@ -220,7 +214,7 @@ class ProfileScreen extends StatelessWidget {
                 );
               },
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               //padding: EdgeInsets.all(20),
             ),
           ]),

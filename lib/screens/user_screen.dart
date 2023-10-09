@@ -104,7 +104,7 @@ class UserScreen extends StatelessWidget {
                             height: 16,
                           ),
                           Container(
-                            width: 190,
+                            width: 150,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [

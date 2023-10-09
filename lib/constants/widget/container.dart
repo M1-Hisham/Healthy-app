@@ -20,14 +20,14 @@ class ContainerCategories extends StatelessWidget {
       onTap: () => Navigator.pushNamed(context, HomeTScreen.routes),
       child: Center(
         child: Container(
-          margin: EdgeInsets.only(bottom: 10, top: 10),
+          margin: const EdgeInsets.only(bottom: 10, top: 10),
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
                 color: black.withAlpha(50),
                 //spreadRadius: 1,
                 blurRadius: 10,
-                offset: Offset(0, 4), // changes position of shadow
+                offset: const Offset(0, 4), // changes position of shadow
               ),
             ],
             //color: white,
@@ -52,7 +52,7 @@ class ContainerCategories extends StatelessWidget {
 }
 
 class ContainerTopRated extends StatelessWidget {
-  ContainerTopRated({
+  const ContainerTopRated({
     super.key,
     required this.image,
   });
@@ -61,9 +61,9 @@ class ContainerTopRated extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => navPush(context: context, screen: RecipesScreen()),
+      onTap: () => navPush(context: context, screen: const RecipesScreen()),
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(20),
         width: 152,
         height: 171,
         decoration: BoxDecoration(
@@ -72,7 +72,7 @@ class ContainerTopRated extends StatelessWidget {
               color: black.withAlpha(80),
               //spreadRadius: 1,
               blurRadius: 10,
-              offset: Offset(0, 8), // changes position of shadow
+              offset: const Offset(0, 8), // changes position of shadow
             ),
           ],
           color: white,
@@ -84,7 +84,7 @@ class ContainerTopRated extends StatelessWidget {
             "Lentil soup",
             style: TextStyle(
               fontFamily: "Inter",
-              fontSize: 12,
+              fontSize: 10,
               fontWeight: w700,
               color: black,
               height: 2,
@@ -92,31 +92,31 @@ class ContainerTopRated extends StatelessWidget {
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             Image.asset('assets/icons/Star 1.png'),
-            Text(
+            const Text(
               "4.8",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: "Inter",
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: FontWeight.w500,
                 color: black,
               ),
             ),
             Image.asset('assets/icons/Vector 2.png'),
-            Text(
+            const Text(
               "15m",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: "Inter",
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: FontWeight.w500,
                 color: black,
               ),
             ),
             Image.asset('assets/icons/Group3.png'),
-            Text(
+            const Text(
               "2",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: "Inter",
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: FontWeight.w500,
                 color: black,
               ),
